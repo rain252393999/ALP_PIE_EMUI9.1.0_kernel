@@ -1,0 +1,8 @@
+*.o
+*.ko
+*.mod.*
+.config
+.tmp_*
+vmlinux
+modules.order
+Module.symvers
