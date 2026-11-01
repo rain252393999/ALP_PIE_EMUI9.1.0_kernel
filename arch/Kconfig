@@ -8,6 +8,10 @@ config KEXEC_CORE
 config HOTPLUG_SMT
 	bool
 
+config FORTIFY_COMPILE_CHECK
+ 	depends on ARCH_HAS_FORTIFY_SOURCE
+ 	bool
+
 config OPROFILE
 	tristate "OProfile system profiling"
 	depends on PROFILING
