@@ -47,7 +47,7 @@
 
 bool bfr_safe_mode_has_been_enabled(void)
 {
-    if (((totalram_pages * PAGE_SIZE) / BFR_KB) < (BFR_MIN_MEM_SIZE_FOR_BOPD))
+    if (((totalram_pages() * PAGE_SIZE) / BFR_KB) < (BFR_MIN_MEM_SIZE_FOR_BOPD))
     {
         return true;
     }
@@ -57,7 +57,7 @@ bool bfr_safe_mode_has_been_enabled(void)
 
 bool bfr_bopd_has_been_enabled(void)
 {
-    if (((totalram_pages * PAGE_SIZE) / BFR_KB) >= (BFR_MIN_MEM_SIZE_FOR_BOPD))
+    if (((totalram_pages() * PAGE_SIZE) / BFR_KB) >= (BFR_MIN_MEM_SIZE_FOR_BOPD))
     {
         return true;
     }

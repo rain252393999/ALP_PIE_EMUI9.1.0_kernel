@@ -3794,16 +3794,16 @@ static int __init cgroup_workingset_init(void)
 
 	spin_lock_init(&g_record_list_lock);
 
-	if (totalram_pages > 3 * TOTAL_RAM_PAGES_1G)
+	if (totalram_pages() > 3 * TOTAL_RAM_PAGES_1G)
 		g_max_records_count = MAX_RECORD_COUNT_ON_4G;
-	else if (totalram_pages > 2 * TOTAL_RAM_PAGES_1G)
+	else if (totalram_pages() > 2 * TOTAL_RAM_PAGES_1G)
 		g_max_records_count = MAX_RECORD_COUNT_ON_3G;
-	else if (totalram_pages > TOTAL_RAM_PAGES_1G)
+	else if (totalram_pages() > TOTAL_RAM_PAGES_1G)
 		g_max_records_count = MAX_RECORD_COUNT_ON_2G;
 	else
 		g_max_records_count = MAX_RECORD_COUNT_ON_1G;
 	ws_dbg("%s, totalram %lu pages, max count of records = %u\n",
-		__func__, totalram_pages, g_max_records_count);
+		__func__, totalram_pages(), g_max_records_count);
 	g_module_initialized = true;
 	return 0;
 

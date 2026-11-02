@@ -192,3 +192,13 @@ bool kernel_page_present(struct page *page)
 }
 #endif /* CONFIG_HIBERNATION */
 #endif /* CONFIG_DEBUG_PAGEALLOC */
+
+int set_direct_map_invalid_noflush(struct page *page)
+{
+return set_memory_valid((unsigned long)page_address(page), 1, 0);
+}
+
+int set_direct_map_default_noflush(struct page *page)
+{
+return set_memory_valid((unsigned long)page_address(page), 1, 1);
+}
