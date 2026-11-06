@@ -1,4 +1,4 @@
-generic-y += bugs.h
+﻿generic-y += bugs.h
 generic-y += clkdev.h
 generic-y += cputime.h
 generic-y += delay.h
