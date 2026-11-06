@@ -6018,6 +6018,7 @@ CONFIG_KSU_SUSFS_SUS_MAP=y
 
 # CONFIG_KPM is not set
 CONFIG_KSU_DEBUG=y
+CONFIG_REKERNEL=y
 
 # Kernel configurations for full DroidSpaces support
 # Copyright (C) 2026 ravindu644 <droidcasts@protonmail.com>
